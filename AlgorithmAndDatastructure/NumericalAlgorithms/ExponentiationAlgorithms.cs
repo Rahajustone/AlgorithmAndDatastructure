@@ -30,7 +30,5 @@ namespace AlgorithmAndDatastructure.NumericalAlgorithms
 
             return result;
         }
-
-        
     }
 }

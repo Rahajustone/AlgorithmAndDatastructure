@@ -20,6 +20,7 @@ namespace AlgorithmAndDatastructure.NumericalAlgorithms
         }
 
         // General recursive 
+        // O(logN)
         public static int GcdGeneralRecursive(int a, int b)
         {
             if (a == 0)
