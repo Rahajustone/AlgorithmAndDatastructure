@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using AlgorithmAndDatastructure.LinkedListAlgorithms;
 using AlgorithmAndDatastructure.NumericalAlgorithms;
 using AlgorithmAndDatastructure.SearchingAlgorithms;
 
@@ -12,20 +13,16 @@ namespace AlgorithmAndDataStructure
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 1; i++)
-            {
-                //Console.Write($" {RandomGeneration.BasicIntegerNumber()}, ");
-            }
+            LinkedList a = new LinkedList();
+            a.Append(1);
+            a.Append(2);
+            a.Append(3);
+            a.Append(4);
+            a.Append(5);
 
-            //var arr = new int[] {1, 2, 4, 5, 6};
+            //a.PrintNode();
 
-            //var arrNewArray = RandomGeneration.RandomizingArray(ref arr);
-
-            //foreach (var ar in arrNewArray)
-            //{
-            //    Console.Write(ar);
-            //}
-
+            Console.WriteLine(a.CountNode());
             Console.Read();
         }
     }
