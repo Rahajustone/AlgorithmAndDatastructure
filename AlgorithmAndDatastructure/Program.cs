@@ -17,13 +17,22 @@ namespace AlgorithmAndDataStructure
 
         static void Main(string[] args)
         {
-            var arr = new int[] { 1, 2, 3, 4, 5, 6, 7 };
-            ReverseArray.Reverse(arr);
+            var arr = new int[] { 21,21,21,21,21,211, 11, 8, 7, 21, 2, 3, 4, 5, 6, 7 };
+
+            var obj = new SortingAlgorithms();
+            obj.InsertionSortTest(arr);
 
             foreach (var item in arr)
             {
                 Console.WriteLine(item);
             }
+
+            //ReverseArray.Reverse(arr);
+
+            //foreach (var item in arr)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
             //var arr = new ArrayStack(21);
             //arr.Push(1);
