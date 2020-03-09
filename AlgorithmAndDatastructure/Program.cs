@@ -17,13 +17,25 @@ namespace AlgorithmAndDataStructure
 
         static void Main(string[] args)
         {
-            var arr = new int[] { 1, 2, 3, 4, 5, 6, 7 };
-            ReverseArray.Reverse(arr);
 
-            foreach (var item in arr)
-            {
-                Console.WriteLine(item);
-            }
+            //var queue = new LinkedListedQueue();
+            //queue.Queue(1);
+            //queue.Queue(2);
+            //queue.Queue(3);
+            //queue.Queue(4);
+
+            //var b = queue.Dequeue();
+
+            //Console.WriteLine(b);
+
+
+            //var arr = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            //ReverseArray.Reverse(arr);
+
+            //foreach (var item in arr)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
             //var arr = new ArrayStack(21);
             //arr.Push(1);
@@ -55,15 +67,15 @@ namespace AlgorithmAndDataStructure
 
 
 
-            //// Insertion Sort Algorithms
-            //var sortarray = new InsertionSortAlgorithms();
-            //var arr = new int[]{ 11, 2, 31, 14, 15, 1, 2, 4};
-            //sortarray.InsertionSort(arr);
+            // Insertion Sort Algorithms
+            var sortarray = new InsertionSortAlgorithms();
+            var arr = new int[] { 11, 2, 31, 14, 15, 1, 2, 4 };
+            sortarray.SelectionSort(arr);
 
-            //foreach (var item in arr)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            foreach (var item in arr)
+            {
+                Console.WriteLine(item);
+            }
 
 
             //var singleLinkedList = new SingleLinkedList();
