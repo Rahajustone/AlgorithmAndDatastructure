@@ -80,5 +80,32 @@ namespace AlgorithmAndDatastructure.SortingAlgorithms
 
             BubbleSortRecursion(arr, length-1);
         }
+
+        public void SelectionSorts(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int minIndex = i;
+
+                int j = i + 1;
+                while (j < arr.Length)
+                {
+                    if (arr[j] < arr[minIndex])
+                    {
+                        minIndex = j;
+                    }
+                                        
+                    j++;
+                }
+
+                if (i == minIndex)
+                {
+                    arr[minIndex] = arr[j];
+                    arr[j] = arr[minIndex];
+                }
+
+            }
+        }
+
     }
 }
