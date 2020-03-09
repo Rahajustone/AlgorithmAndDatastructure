@@ -1,9 +1,9 @@
 ﻿using System;
 namespace AlgorithmAndDatastructure.StackAndQueues
 {
-    public class InficToPostfixWithStack
+    public class InfixToPostfixWithStack
     {
-        public InficToPostfixWithStack()
+        public InfixToPostfixWithStack()
         {
         }
 

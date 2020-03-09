@@ -37,6 +37,13 @@ namespace AlgorithmAndDataStructure
             //    Console.WriteLine(item);
             //}
 
+            //ReverseArray.Reverse(arr);
+
+            //foreach (var item in arr)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
             //var arr = new ArrayStack(21);
             //arr.Push(1);
             //arr.Push(2);
