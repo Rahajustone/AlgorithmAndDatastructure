@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using AlgorithmAndDatastructure.ArraysAlgorithms;
 using AlgorithmAndDatastructure.LinkedListAlgorithms;
 using AlgorithmAndDatastructure.NumericalAlgorithms;
@@ -14,9 +15,49 @@ namespace AlgorithmAndDataStructure
 {
     class Program
     {
+        public static List<int> climbingLeaderboard(List<int> ranked, List<int> player)
+        {
+            List<int> rankedList = new List<int>();
+            var rankedRatio = new Dictionary<int, int>();
+
+            int k = 1;
+            for (int i = 0; i < ranked.Count; i++)
+            {
+                if (!rankedRatio.ContainsKey(ranked[i]))
+                {
+                    rankedRatio.Add(ranked[i], k);
+                    k++;
+                }
+            }
+
+            for (int i = 0; i < player.Count; i++)
+            {
+                for (int j = 0; j < rankedRatio.Count; j++)
+                {
+                    if (player[i] >= rankedRatio.ElementAt(j).Key)
+                    {
+                        rankedList.Add(rankedRatio.ElementAt(j).Value);
+                    }
+                    if (j == rankedRatio.Count - 1)
+                    {
+                        rankedList.Add(rankedRatio.ElementAt(j).Value + 1);
+                    }
+                }
+            }
+
+            return rankedList;
+        }
+
 
         static void Main(string[] args)
         {
+
+            var a = climbingLeaderboard(new List<int> { 100, 90, 90, 80, 75, 60 }, new List<int> { 50, 65, 77, 90, 102 });
+
+            foreach (var item in a)
+            {
+                Console.WriteLine(item);
+            }
 
             //var queue = new LinkedListedQueue();
             //queue.Queue(1);
@@ -75,14 +116,14 @@ namespace AlgorithmAndDataStructure
 
 
             // Insertion Sort Algorithms
-            var sortarray = new InsertionSortAlgorithms();
-            var arr = new int[] { 11, 2, 31, 14, 15, 1, 2, 4 };
-            sortarray.SelectionSort(arr);
+            //var sortarray = new InsertionSortAlgorithms();
+            //var arr = new int[] { 11, 2, 31, 14, 15, 1, 2, 4 };
+            //sortarray.SelectionSort(arr);
 
-            foreach (var item in arr)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in arr)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
 
             //var singleLinkedList = new SingleLinkedList();
