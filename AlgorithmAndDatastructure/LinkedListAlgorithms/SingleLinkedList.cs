@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AlgorithmAndDatastructure.LinkedListAlgorithms
 {
-    class SingleNode
+    public class SingleNode
     {
         public int Data;
         public SingleNode NextNode;
@@ -12,6 +12,14 @@ namespace AlgorithmAndDatastructure.LinkedListAlgorithms
         public SingleNode(int data)
         {
             this.Data = data;
+        }
+    }
+
+    public class SingleNodeLoop : SingleNode
+    {
+        public int Flag { get; set; } = 0;
+        public SingleNodeLoop(int data):base(data)
+        {
         }
     }
     class SingleLinkedList
@@ -178,5 +186,106 @@ namespace AlgorithmAndDatastructure.LinkedListAlgorithms
         {
             _head = null;
         }
+
+
+        // Loop detection
+        // First Methods to put in hashset and check if it is in HashSet then false else return true
+        // We can use HashSet to check if we have loop detection
+        /**
+            1->2->3
+                <-4  
+         **/
+
+        public static bool DetectLoop(Node head)
+        {
+            HashSet<Node> tempNode = new HashSet<Node>();
+
+            while(head != null)
+            {
+                if (tempNode.Contains(head))
+                    return true;
+
+                tempNode.Add(head);
+                head = head.next;
+            }
+
+            return false;
+        }
+
+
+        // Loop detection with change structure of Linked List
+        // Add just flag to It
+        public bool DetectLoopWithFlag(SingleNodeLoop head)
+        {
+            while(head != null)
+            {
+                if (head.Flag == 1) return true;
+
+                head.Flag = 1;
+                head = (SingleNodeLoop)head.NextNode;
+            }
+
+
+            return false;
+        }
+
+        // Loop detection with Floyd’s Cycle-Finding Algorithm:
+        /** Approach: This is the fastest method and has been described below:  
+         * Traverse linked list using two pointers.
+         * Move one pointer(slow_p) by one and another pointer(fast_p) by two.
+         * If these pointers meet at the same node then there is a loop. If pointers do not meet then linked list doesn’t have a loop.
+        */
+
+        public bool DetectLoopFloydCircle()
+        {
+            SingleNode slowPointer = _head, fastPointer = _head;
+
+            while(slowPointer != null && fastPointer != null&& fastPointer.NextNode != null)
+            {
+                slowPointer = slowPointer.NextNode;
+                fastPointer = fastPointer.NextNode.NextNode;
+
+                if (slowPointer == fastPointer) return true;
+            }
+
+            return false;
+        }
+
+        // Return count of nodes in Loop
+        public int CountNodeLoop(SingleNode node)
+        {
+            SingleNode tempNode = node;
+            int count = 1;
+            while(tempNode.NextNode == node)
+            {
+                count++;
+                tempNode = tempNode.NextNode;
+            }
+
+            return count;
+        }
+
+        // Find Count node in Loop
+        public int CountNodeInLoop(Node list)
+        {
+            SingleNode slowPointer = _head, fastPointer = _head;
+
+            while (slowPointer != null && fastPointer != null && fastPointer.NextNode != null)
+            {
+                slowPointer = slowPointer.NextNode;
+                fastPointer = fastPointer.NextNode.NextNode;
+                if (slowPointer == fastPointer)
+                {
+                    return CountNodeLoop(slowPointer);
+                }
+            }
+
+            return -1;
+        }
+
+
     }
 }
+
+
+
