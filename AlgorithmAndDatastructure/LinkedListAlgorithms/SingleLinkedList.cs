@@ -283,6 +283,39 @@ namespace AlgorithmAndDatastructure.LinkedListAlgorithms
             return -1;
         }
 
+        /**
+         * Is linked liste is Palindrom
+         * By using Stack we can check
+         * Push all object to Stack then Pop and test them
+         * 
+         */
+        public bool IsPolindrom()
+        {
+            Stack<int> tempStack = new Stack<int>();
+            SingleNode tempNode = _head;
+
+            while(tempNode != null)
+            {
+                tempStack.Push(tempNode.Data);
+                tempNode = tempNode.NextNode;
+            }
+
+            tempNode = _head;
+
+            while(tempNode != null && tempStack.Count > 0)
+            {
+                if (tempStack.Pop() != tempNode.Data)
+                {
+                    return false;
+                }
+            }
+
+
+            return true;
+        }
+
+        
+
 
     }
 }
