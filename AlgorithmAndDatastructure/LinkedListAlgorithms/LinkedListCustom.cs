@@ -2,7 +2,7 @@
 
 namespace AlgorithmAndDatastructure.LinkedListAlgorithms
 {
-    public class LinkedList
+    public class LinkedListCustomTest
     {
         private Node _head;
 
