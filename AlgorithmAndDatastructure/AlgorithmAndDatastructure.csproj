@@ -9,9 +9,11 @@
   <ItemGroup>
     <None Remove="SortingAlgorithms\QuestionLeetCode\" />
     <None Remove="LinkedListAlgorithms\LinkedListCustom\" />
+    <None Remove="LinkedListAlgorithms\DoubleLinkedList\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SortingAlgorithms\QuestionLeetCode\" />
     <Folder Include="LinkedListAlgorithms\LinkedListCustom\" />
+    <Folder Include="LinkedListAlgorithms\DoubleLinkedList\" />
   </ItemGroup>
 </Project>
