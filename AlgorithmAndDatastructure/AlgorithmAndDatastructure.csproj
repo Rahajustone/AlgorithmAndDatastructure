@@ -10,10 +10,12 @@
     <None Remove="SortingAlgorithms\QuestionLeetCode\" />
     <None Remove="LinkedListAlgorithms\LinkedListCustom\" />
     <None Remove="LinkedListAlgorithms\DoubleLinkedList\" />
+    <None Remove="StackCustom\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SortingAlgorithms\QuestionLeetCode\" />
     <Folder Include="LinkedListAlgorithms\LinkedListCustom\" />
     <Folder Include="LinkedListAlgorithms\DoubleLinkedList\" />
+    <Folder Include="StackCustom\" />
   </ItemGroup>
 </Project>
