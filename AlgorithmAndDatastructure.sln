@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmAndDatastructure", "AlgorithmAndDatastructure\AlgorithmAndDatastructure.csproj", "{2D171436-041D-4754-A20F-F3AE3B4C0C39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsAndDatastructureNunitTest", "AlgorithmsAndDatastructureNunitTest\AlgorithmsAndDatastructureNunitTest.csproj", "{3467486D-22BE-426E-89FF-EF2667396A7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2D171436-041D-4754-A20F-F3AE3B4C0C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D171436-041D-4754-A20F-F3AE3B4C0C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D171436-041D-4754-A20F-F3AE3B4C0C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3467486D-22BE-426E-89FF-EF2667396A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3467486D-22BE-426E-89FF-EF2667396A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3467486D-22BE-426E-89FF-EF2667396A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3467486D-22BE-426E-89FF-EF2667396A7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

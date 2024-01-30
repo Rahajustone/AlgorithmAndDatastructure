@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>.net7</TargetFramework>
+    <TargetFramework>.net6</TargetFramework>
     <StartupObject>AlgorithmAndDataStructure.Program</StartupObject>
   </PropertyGroup>
 
@@ -11,11 +11,13 @@
     <None Remove="LinkedListAlgorithms\LinkedListCustom\" />
     <None Remove="LinkedListAlgorithms\DoubleLinkedList\" />
     <None Remove="StackCustom\" />
+    <None Remove="QueueCustom\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SortingAlgorithms\QuestionLeetCode\" />
     <Folder Include="LinkedListAlgorithms\LinkedListCustom\" />
     <Folder Include="LinkedListAlgorithms\DoubleLinkedList\" />
     <Folder Include="StackCustom\" />
+    <Folder Include="QueueCustom\" />
   </ItemGroup>
 </Project>

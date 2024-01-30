@@ -13,12 +13,12 @@ namespace AlgorithmAndDataStructure
     {
         static void Main(string[] args)
         {
-            CustomArrayStack csStack = new CustomArrayStack(5);
-            csStack.Push(1);
-            csStack.Push(2);
-            csStack.Push(3);
-            Console.WriteLine(csStack.Pop());
-            Console.WriteLine(csStack.Peek());
+            //CustomArrayStack csStack = new CustomArrayStack(5);
+            //csStack.Push(1);
+            //csStack.Push(2);
+            //csStack.Push(3);
+            //Console.WriteLine(csStack.Pop());
+            //Console.WriteLine(csStack.Peek());
             //Console.WriteLine(csStack.Pop());
             //csStack.PrintArr();
 
