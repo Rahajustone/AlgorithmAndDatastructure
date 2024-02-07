@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
 namespace AlgorithmAndDatastructure.LinkedListAlgorithms.LinkedListCustom
 {
-	public class CustomLinkedListGenerics<T>
+	public class CustomLinkedListGenerics<T> : IEnumerable<T>
 	{
         private class CustomNode<T>
         {
@@ -13,7 +16,7 @@ namespace AlgorithmAndDatastructure.LinkedListAlgorithms.LinkedListCustom
                 this.value = value;
             }
         }
-
+        public T Head => first.value;
         private CustomNode<T> first;
         private CustomNode<T> last;
         private int size { get; set; } = 0;
@@ -166,6 +169,21 @@ namespace AlgorithmAndDatastructure.LinkedListAlgorithms.LinkedListCustom
         private bool IsEmpty()
         {
             return first == null;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        { 
+            var current = first;
+            while (current != null)
+            {
+                yield return current.value;
+                current = current.next;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
