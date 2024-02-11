@@ -40,6 +40,11 @@ namespace AlgorithmAndDatastructure.QueueCustom
         {
             return _list.GetEnumerator();
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

@@ -12,6 +12,7 @@
     <None Remove="LinkedListAlgorithms\DoubleLinkedList\" />
     <None Remove="StackCustom\" />
     <None Remove="QueueCustom\" />
+    <None Remove="Dictionary\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SortingAlgorithms\QuestionLeetCode\" />
@@ -19,5 +20,6 @@
     <Folder Include="LinkedListAlgorithms\DoubleLinkedList\" />
     <Folder Include="StackCustom\" />
     <Folder Include="QueueCustom\" />
+    <Folder Include="Dictionary\" />
   </ItemGroup>
 </Project>
