@@ -3,24 +3,24 @@ using System.Collections.Generic;
 
 namespace AlgorithmAndDatastructure.HashingAlgorithms
 {
+    // To hold key value
+    public class Entry
+    {
+        public object key { get; set; }
+        public object value { get; set; }
+
+        public Entry(object key, object value)
+        {
+            this.key = key;
+            this.value = value;
+        }
+    }
+
     public class HashTable
     {
-        // To hold key value
-        private class Entry
-        {
-            public int key { get; set; }
-            public string value { get; set; }
-
-            public Entry(int key, string value)
-            {
-                this.key = key;
-                this.value = value;
-            }
-        }
-
         private LinkedList<Entry>[] entries = new LinkedList<Entry>[5];
 
-        public void Put(int k, string v)
+        public void Put(object k, object v)
         {
             int index = Hash(k);
             if (entries[index] == null)
@@ -29,7 +29,7 @@ namespace AlgorithmAndDatastructure.HashingAlgorithms
             }
 
             var bucket = entries[index];
-            foreach (var item in bucket)
+            foreach (Entry item in bucket)
             {
                 if (item.key == k)
                 {
@@ -42,16 +42,16 @@ namespace AlgorithmAndDatastructure.HashingAlgorithms
             entries[index].AddLast(entry);
         }
 
-        public string Get(int k)
+        public object Get(object k)
         {
             var index = Hash(k);
             var buckets = entries[index];
 
             if (buckets != null)
             {
-                foreach (var item in buckets)
+                foreach (Entry item in buckets)
                 {
-                    if (item.key == k)
+                    if (Object.Equals(item.key, k))
                     {
                         return item.value;
                     }
@@ -61,9 +61,9 @@ namespace AlgorithmAndDatastructure.HashingAlgorithms
             return null;
         }
 
-        private int Hash(int key)
+        private int Hash(object key)
         {
-            return key % entries.Length;
+            return key.GetHashCode() % entries.Length;
         }
 
     }
