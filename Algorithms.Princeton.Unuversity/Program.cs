@@ -1,24 +1,21 @@
 ﻿using Algorithms.Princeton.Unuversity.Connectivity;
+using Algorithms.Princeton.Unuversity.QueueCustom;
 
 class Program
 {
     static void Main(string[] args)
     {
+        var queue = new CustomQueueWithLinkedList<int>();
+        queue.Enqueue(1);
+        queue.Enqueue(2);
+        queue.Enqueue(3);
+        queue.Enqueue(4);
+        queue.Dequeue();
+        queue.Dequeue();
+        queue.Dequeue();
+        queue.Dequeue();
 
-        var quickUnion = new QuickUnion(10);
-        var r = quickUnion.IsConnected(1, 5);
-        Console.WriteLine(r);
-        quickUnion.Union(1, 5);
-        var res = quickUnion.IsConnected(1, 5);
-        Console.WriteLine(r);
-        var r1 = quickUnion.IsConnected(2, 3);
-        var r2 = quickUnion.IsConnected(4, 3);
-        var r3 = quickUnion.IsConnected(5, 1);
-
-        Console.WriteLine(r1);
-        Console.WriteLine(r2);
-        Console.WriteLine(r3);
-
+        queue.PrintQueue();
 
     }
 }
