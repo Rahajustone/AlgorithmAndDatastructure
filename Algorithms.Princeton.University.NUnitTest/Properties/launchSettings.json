@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Algorithms.Princeton.University.NUnitTest": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

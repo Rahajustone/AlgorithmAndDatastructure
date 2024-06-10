@@ -16,6 +16,7 @@ namespace AlgorithmAndDataStructure
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello Wordl");
 
             var customHashTable = new CustomHashTable.HashTable();
             customHashTable.Put(1, "one");
