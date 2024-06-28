@@ -5,17 +5,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        var queue = new CustomQueueWithLinkedList<int>();
-        queue.Enqueue(1);
-        queue.Enqueue(2);
-        queue.Enqueue(3);
-        queue.Enqueue(4);
-        queue.Dequeue();
-        queue.Dequeue();
-        queue.Dequeue();
-        queue.Dequeue();
+        var queue = new CircularQueue();
+        queue.InsertFront(1);
+        queue.InsertFront(2);
+        //queue.InsertLast(3);
+        queue.InsertFront(4);
+        queue.InsertFront(5);
+        //queue.InsertLast(6);
 
-        queue.PrintQueue();
+        queue.PrintAll();
+        Console.WriteLine("--------");
+        queue.PrintAllFromLast();
+
 
     }
 }
